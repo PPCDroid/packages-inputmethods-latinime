@@ -9,8 +9,10 @@ LOCAL_SRC_FILES := \
 	src/char_utils.cpp
 
 ifneq ($(TARGET_ARCH),x86)
+ifneq ($(TARGET_ARCH),powerpc)
 LOCAL_NDK_VERSION := 4
 LOCAL_SDK_VERSION := 8
+endif
 endif
 
 LOCAL_MODULE := libjni_latinime
